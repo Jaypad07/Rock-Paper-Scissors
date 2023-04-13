@@ -1,9 +1,10 @@
-public class Computer {
-   private static String[] cpuNames = {"Skynet", "Ultron", "Sentinels", "Megatron", "The Cylons", "T-1000", "Terminator", "The Borg", "The Replicants"};
+public class Computer extends Player{
+   private static String[] cpuNames = {"Skynet", "Ultron", "Agent Smith", "Megatron", "Cylon", "T-1000", "Terminator", "The Borg", "The Replicant"};
 private String cpuName;
 
-    public Computer(String cpuName) {
-        this.cpuName = cpuName;
+    public Computer(String name) {
+        super(name);
+        this.cpuName = Computer.createCpuName();
     }
 
     public String getCpuName() {
@@ -14,9 +15,8 @@ private String cpuName;
         this.cpuName = cpuName;
     }
 
-    public static Computer createCpu() {
-
-        int randomNum = (int) (Math.floor(Math.random() * 9));
-        return new Computer(cpuNames[randomNum]);
+    public static String createCpuName() {
+        int randomNum = (int) (Math.floor(Math.random() * cpuNames.length));
+        return cpuNames[randomNum];
     }
 }
