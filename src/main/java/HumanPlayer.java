@@ -6,11 +6,13 @@ public class HumanPlayer extends Player{
         super(playerName);
     }
 
-//    public static void createPlayers() {
-//        System.out.println("Please enter player name");
-//        Scanner scanner = new Scanner(System.in);
-//        String playerName = scanner.nextLine();
-//        HumanPlayer humanPlayer = new HumanPlayer(playerName);
-//    }
+    @Override
+    public String playerChoice() {
+        Scanner scanner = new Scanner(System.in);
+        String playerPick = getRspArr()[scanner.nextInt() - 1].getType();
+        System.out.println(getPlayerName() + " chose " + playerPick);
+        return playerPick;
+    }
+
 
 }

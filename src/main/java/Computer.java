@@ -1,22 +1,25 @@
 public class Computer extends Player{
    private static String[] cpuNames = {"Skynet", "Ultron", "Agent Smith", "Megatron", "Cylon", "T-1000", "Terminator", "The Borg", "The Replicant"};
-private String cpuName;
+   private String compName;
 
-    public Computer(String name) {
-        super(name);
-        this.cpuName = Computer.createCpuName();
+    public Computer() {
+        int randomNum = (int) (Math.floor(Math.random() * cpuNames.length));
+        this.compName = cpuNames[randomNum];
+    }
+    @Override
+    public String playerChoice() {
+        String compPick = getRspArr()[(int) (Math.floor(Math.random() * 3))].getType(); //Picks Rock, Paper, or Scissors for computer
+        System.out.println(getCompName() + " chose " + compPick);
+        return compPick;
     }
 
-    public String getCpuName() {
-        return cpuName;
+    public String getCompName() {
+        return compName;
     }
 
     public void setCpuName(String cpuName) {
-        this.cpuName = cpuName;
+        this.compName = cpuName;
     }
 
-    public static String createCpuName() {
-        int randomNum = (int) (Math.floor(Math.random() * cpuNames.length));
-        return cpuNames[randomNum];
-    }
+
 }

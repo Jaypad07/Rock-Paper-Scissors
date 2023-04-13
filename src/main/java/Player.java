@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public abstract class Player {
     private String playerName;
-//    private int playerNum;
+    private RPS[] rspArr = new RPS[]{new RPS("Rock"), new RPS("Paper"),new RPS("Scissors")};
 
+    public Player() {
+    }
 
     public Player(String playerName) {
         this.playerName = playerName;
-//        this.playerNum = playerNum;
     }
 
+    public abstract String playerChoice();
 
     public String getPlayerName() {
         return playerName;
@@ -19,18 +21,18 @@ public abstract class Player {
         this.playerName = playerName;
     }
 
+    public RPS[] getRspArr() {
+        return rspArr;
+    }
+
+    public void setRspArr(RPS[] rspArr) {
+        this.rspArr = rspArr;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "playerName='" + playerName + '\'' +
                 '}';
     }
-
-    //    public int getPlayerNum() {
-//        return playerNum;
-//    }
-//
-//    public void setPlayerNum(int playerNum) {
-//        this.playerNum = playerNum;
-//    }
 }

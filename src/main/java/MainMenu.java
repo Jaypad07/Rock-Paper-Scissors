@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class MainMenu {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        MainMenu menu = new MainMenu();
+        menu.menu();
+    }
+
+    public void menu() {
         System.out.println("Welcome to Rock Paper Scissors!");
         System.out.println();
         System.out.println("MAIN MENU");
@@ -13,11 +17,11 @@ public class MainMenu {
         System.out.println("4. Quit Game");
         System.out.println();
         System.out.println("Please select an option by pressing 1-4");
+
+        Scanner scanner = new Scanner(System.in);
         int userInput = scanner.nextInt();
-
-
         switch (userInput) {
-            case 1 : Game.startNewGame(userInput); //Starts game vs Computer
+            case 1 : new Game().startNewGame(userInput); //Starts game vs Computer
                 break;
             case 2 : //Starts game vs Player
                 break;
@@ -26,4 +30,5 @@ public class MainMenu {
             case 4 : // Terminates program with a "You have exited the game" message
         }
     }
+
 }
