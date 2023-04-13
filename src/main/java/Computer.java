@@ -5,6 +5,7 @@ public class Computer extends Player{
     public Computer() {
         int randomNum = (int) (Math.floor(Math.random() * cpuNames.length));
         this.compName = cpuNames[randomNum];
+        setPlayerName(compName);
     }
     @Override
     public String playerChoice() {

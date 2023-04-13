@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MainMenu {
     public static void main(String[] args) {
-        MainMenu menu = new MainMenu();
+        MainMenu menu = new MainMenu(); //Is it ok to shorten this?
         menu.menu();
     }
 
@@ -18,17 +18,9 @@ public class MainMenu {
         System.out.println();
         System.out.println("Please select an option by pressing 1-4");
 
-        Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
-        switch (userInput) {
-            case 1 : new Game().startNewGame(userInput); //Starts game vs Computer
-                break;
-            case 2 : //Starts game vs Player
-                break;
-            case 3 : //Brings up records screen - This should read from file and display past records
-                break;
-            case 4 : // Terminates program with a "You have exited the game" message
-        }
+        int userInput = new Scanner(System.in).nextInt();  //Is this ok to do? Code readAbility
+        Game game = new Game();
+        game.startNewGame(userInput);
     }
 
 }

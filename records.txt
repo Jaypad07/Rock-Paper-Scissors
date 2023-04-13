@@ -1,0 +1,10 @@
+DRAW: Jay chose Rock, T-1000 chose Rock
+WIN: Marie chose Paper, The Replicant chose Rock
+DRAW: Obinna chose Scissors, Skynet chose Scissors
+LOSS: Kim chose Scissors, Agent Smith chose Rock
+WIN: Jay chose Rock, Marie chose Scissors
+WIN: Kim chose Paper, Obinna chose Rock
+DRAW: Jay chose Paper, Megatron chose Paper
+LOSS: Kim chose Paper, Obinna chose Scissors
+LOSS: Kevin chose Rock, Megatron chose Paper
+LOSS: Obinna chose Paper, Kim chose Scissors
