@@ -37,8 +37,11 @@ public class Records {
                 String currentLine = bufferedReader.readLine();
                 System.out.println(currentLine);
             }
+            Thread.sleep(5000);
         }catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        new MainMenu().menu();
     }
 }
