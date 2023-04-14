@@ -8,3 +8,11 @@ WIN: Kim chose Scissors, T-1000 chose Paper
 DRAW: Kim chose Rock, T-1000 chose Rock
 LOSS: Kim chose Paper, T-1000 chose Scissors
 LOSS: Kim chose Paper, T-1000 chose Scissors
+WIN: Carter chose Rock, Terminator chose Scissors
+DRAW: Jay chose Paper, Terminator chose Paper
+LOSS: Jay chose Scissors, Terminator chose Rock
+LOSS: Jay chose Rock, Terminator chose Paper
+LOSS: Jay chose Paper, Terminator chose Scissors
+WIN: Jay chose Rock, Terminator chose Scissors
+DRAW: Jay chose Rock, Terminator chose Rock
+WIN: Jay chose Rock, Terminator chose Scissors
