@@ -16,3 +16,4 @@ LOSS: Jay chose Paper, Terminator chose Scissors
 WIN: Jay chose Rock, Terminator chose Scissors
 DRAW: Jay chose Rock, Terminator chose Rock
 WIN: Jay chose Rock, Terminator chose Scissors
+WIN: pop chose Scissors, Cylon chose Paper

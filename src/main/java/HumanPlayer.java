@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player{
@@ -18,9 +19,17 @@ public class HumanPlayer extends Player{
      */
     @Override
     public String playerChoice() {
-        Scanner scanner = new Scanner(System.in);
-        String playerPick = getRspArr()[scanner.nextInt() - 1].getType();
-        System.out.println(getPlayerName() + " chose " + playerPick);
+        String playerPick = "";
+        try {
+            Scanner scanner = new Scanner(System.in);
+            playerPick = getRspArr()[scanner.nextInt() - 1].getType();
+            System.out.println(getPlayerName() + " chose " + playerPick);
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Please select a number from 1-3");
+            System.out.println("Returning to Main menu...");
+            MainMenu.restartCount();
+        }
         return playerPick;
     }
 
