@@ -2,3 +2,9 @@ LOSS: Kevin chose Paper, T-1000 chose Scissors
 WIN: Kevin chose Scissors, Terminator chose Paper
 LOSS: Kevin chose Paper, Cylon chose Scissors
 WIN: Kevin chose Scissors, Terminator chose Paper
+DRAW: sadasd chose Paper, Terminator chose Paper
+LOSS: Kim chose Paper, T-1000 chose Scissors
+WIN: Kim chose Scissors, T-1000 chose Paper
+DRAW: Kim chose Rock, T-1000 chose Rock
+LOSS: Kim chose Paper, T-1000 chose Scissors
+LOSS: Kim chose Paper, T-1000 chose Scissors

@@ -7,6 +7,11 @@ public class MainMenu {
         menu.menu();
     }
 
+    /**
+     * This method displays each game mode. It takes user input and passes that input to the
+     * startGame method located in the Game class. If the user enters invalid input it will handle the exception,
+     * inform the user of the accepted input and restart to the menu so the user may select again.
+     */
     public void menu() {
         System.out.println();
         System.out.println("Welcome to Rock Paper Scissors!");
@@ -21,7 +26,7 @@ public class MainMenu {
         System.out.println("Please select an option by pressing 1-4");
 
         try {
-            int userInput = new Scanner(System.in).nextInt();
+            int userInput = new Scanner(System.in).nextInt(); //Creates a Scanner object to take in user input to select game mode
             Game game = new Game();
             game.startNewGame(userInput);
         }catch (InputMismatchException e) {
@@ -30,6 +35,11 @@ public class MainMenu {
         }
     }
 
+
+    /**
+     * This method will handle any bad input from the user. If the user enters a number outside the accepted range,
+     * this method will wait 2 seconds, and then begin a countdown to restart the menu.
+     */
     public static void restartCount() { //Handles bad input from player & restarts game
         try {
             int count = 3;
@@ -41,7 +51,7 @@ public class MainMenu {
             }
             new MainMenu().menu();
         } catch (InterruptedException ex) {
-            throw new RuntimeException(ex);
+            System.out.println(ex.getMessage());
         }
     }
 }
