@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -7,6 +8,7 @@ public class MainMenu {
     }
 
     public void menu() {
+        System.out.println();
         System.out.println("Welcome to Rock Paper Scissors!");
         System.out.println();
         System.out.println("MAIN MENU");
@@ -18,9 +20,27 @@ public class MainMenu {
         System.out.println();
         System.out.println("Please select an option by pressing 1-4");
 
-        int userInput = new Scanner(System.in).nextInt();  //Is this ok to do? Code readAbility
-        Game game = new Game();
-        game.startNewGame(userInput);
+        try {
+            int userInput = new Scanner(System.in).nextInt();
+            Game game = new Game();
+            game.startNewGame(userInput);
+        }catch (InputMismatchException e) {
+            System.out.println("Please select a valid number 1-4, you may choose a new number in:");
+            restartCount();
+        }
     }
 
+    public static void restartCount() {
+        try {
+            Thread.sleep(2000);
+            System.out.println(3);
+            Thread.sleep(1000);
+            System.out.println(2);
+            Thread.sleep(1000);
+            System.out.println(1);
+            new MainMenu().menu();
+        } catch (InterruptedException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
 }

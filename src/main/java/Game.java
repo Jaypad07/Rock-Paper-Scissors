@@ -1,11 +1,10 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
     Records record = new Records();
-    public Game() {
-    }
 
-    public void startNewGame(int gameMode) {
+    public void startNewGame(int gameMode) throws InputMismatchException {
 
         switch (gameMode) {  //Starts game vs Computer
             case 1 -> {
@@ -15,6 +14,7 @@ public class Game {
                 Computer comp = new Computer();
                 System.out.println("Your Cpu opponent is: " + comp.getCompName());
                 pickType(humanPlayer, comp);
+
             }
             case 2 -> { //Starts TwoPlayer game
                 System.out.println("Please enter player name");
@@ -33,6 +33,7 @@ public class Game {
             case 4  -> { // Terminates program with a "You have exited the game" message
                 System.exit(0);
             }
+            default -> System.out.println("Please select a valid number, select a number 1-4");
         }
     }
 
@@ -61,5 +62,13 @@ public class Game {
             }else  record.recordLoss(playerOne, playerTwo, playerPick, player2Pick);
                 break;
         }
+    }
+
+    public void restartGame() {
+        System.out.println("Do you want to play again? (Y/N)");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        if (str.equalsIgnoreCase("y")) MainMenu.restartCount();
+        else System.exit(0);
     }
 }
