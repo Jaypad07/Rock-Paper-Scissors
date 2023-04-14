@@ -85,13 +85,13 @@ public class Game {
      * passed is a 1 to correctly select gameMode '1' for Player Vs Cpu.
      */
     public void playerVsComputer() {
-        if (playerRestart) {
+        if (playerRestart) { //This is used to check if a restart has occurred.
             System.out.println("Your Cpu opponent is: " + Computer.computer.getCompName());
-            compareType(HumanPlayer.humanPlayer.getHumanPlayer(), Computer.computer);
-            displayPoints(HumanPlayer.humanPlayer, Computer.computer);
-            playAgain(1);
+            compareType(HumanPlayer.humanPlayer.getHumanPlayer(), Computer.computer); //Grabs the same player and computer references from their respective classes.
+            displayPoints(HumanPlayer.humanPlayer, Computer.computer); //Displays points earned
+            playAgain(1); //Gives option to restart game.
 
-        }else {
+        }else {//Setup Game - Always runs first, will set create the objects to be used and save references for a restart.
             System.out.println("Please enter player name");
             String playerName = new Scanner(System.in).nextLine();
             HumanPlayer humanPlayer = new HumanPlayer(playerName);
@@ -134,11 +134,12 @@ public class Game {
     }
 
     /**
-     * 
-     * @param gameMode
+     * Allows player to choose to start again or go back to main menu. If the user selects play again, it will flag the player
+     * restart to true and keep their names and score intact.
+     * @param gameMode parameter is passed a 1 or 2 to determine the gameMode the player should return to when a restart is initialized.
      */
     public void playAgain(int gameMode) {
-        playerRestart = true;
+        playerRestart = true; //Sets playerRestart variable to true, flagging a restart has occured.
         System.out.println();
         System.out.println("Press 1 to play again or 2 go back to the main menu.");
         Scanner scanner = new Scanner(System.in);
@@ -146,7 +147,7 @@ public class Game {
         if (num == 1) {
             int count = 3;
             try {
-                System.out.println("Game Starting in: ");
+                System.out.println("Game Starting in: "); //a countdown timer until a restart is initiated.
                 while (count > 0) {
                     System.out.println(count);
                     Thread.sleep(1000);
@@ -157,11 +158,16 @@ public class Game {
                 System.out.println(e.getMessage());
             }
         } else {
-            playerRestart = false;
-            new MainMenu().menu();
+            playerRestart = false; //sets playerRestart to false.
+            new MainMenu().menu(); // Returns player to main menu.
         }
     }
 
+    /**
+     * Displays player/computer points.
+     * @param playerOne a player object is passed to obtain name and point information
+     * @param playerTwo a player2 object is passed to obtain name and point information
+     */
     public void displayPoints(Player playerOne, Player playerTwo) {
         System.out.println(playerOne.getPlayerName() + ": " + playerOne.getPlayerPoints());
         System.out.println(playerTwo.getPlayerName() + ": " + playerTwo.getPlayerPoints());
