@@ -1,5 +1,5 @@
 # _Rock Paper Scissors Game_
-The Rock Paper Scissors game is a classic hand game played between humans and villain robots. In this exciting adaptation, you are pitted against evil robots who seek to destroy the human race. It's a battle for survival where each player simultaneously forms one of three shapes with an outstretched hand: rock, paper, or scissors. The outcome of the game determines whether humanity can triumph over its robotic adversaries.
+This is one of the first projects I had the pleasure of creating in Java. The Rock Paper Scissors game is a classic hand game played between humans and villain robots. You are pitted against evil robots who seek to destroy the human race. It's a battle for survival. The outcome of the game determines whether humanity can triumph over its robotic adversaries.
 
 ### Rules of the Game
 The rules of the Rock Paper Scissors game remain the same:
@@ -7,8 +7,6 @@ The rules of the Rock Paper Scissors game remain the same:
 * Rock beats scissors
 * Scissors beat paper
 * Paper beats rock
-
-However, in this high-stakes version, your choices directly impact the fate of humanity. Choose wisely and strategically to defeat the villain robots and secure the future of humankind.
 
 ### Features
 The Rock Paper Scissors game with villain robots offers the following features:
